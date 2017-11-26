@@ -35,22 +35,22 @@ git 之所以令人费解，主要是它相比于 svn 等等传统的版本管�
 
 已推送( Pushed )
 
-##一、检查修改
+##一、检查修改<br>
 1、已修改，未暂存
 git diff
-2、已暂存，未提交
+2、已暂存，未提交<br>
 git diff --cached
-3、已提交，未推送
-git diff master origin/master
-##二、撤销修改
-1、已修改，未暂存
+3、已提交，未推送<br>
+git diff master origin/master<br>
+##二、撤销修改<br>
+1、已修改，未暂存<br>
 如果我们只是在编辑器里修改了文件，但还没有执行 git add . ，这时候我们的文件还在 工作区 ，并没有进入 暂存区 ，我们可以用：
 
 git checkout .
 或者
 
 git reset --hard
-2、已暂存，未提交
+2、已暂存，未提交<br>
 你已经执行了 git add . ，但还没有执行 git commit -m “comment” 。这时候你意识到了错误，想要撤销，你可以执行：
 
 git reset
@@ -58,14 +58,14 @@ git checkout .
 或者
 
 git reset --hard
-3、已提交，未推送
+3、已提交，未推送<br>
 你的手太快，你既执行了 git add . ，又执行了 git commit ，这时候你的代码已经进入了你的 本地仓库 ，然而你后悔了，怎么办？不要着急，还有办法。
 
 git reset --hard origin/master
 还是这个 git reset —hard 命令，只不过这次多了一个参数 origin/master ，正如我们上面讲过的， origin/master 代表 远程仓库 ，既然你已经污染了你的 本地仓库 ，那么就从 远程仓库 把代码取回来吧。
-4、已推送
+4、已推送<br>
 很不幸，你的手实在是太快了，你既 git add 了，又 git commit 了，并且还 git push 了，这时你的代码已经进入 远程仓库 。如果你想恢复的话，还好，由于你的 本地仓库 和 远程仓库 是等价的，你只需要先恢复 本地仓库 ，再强制 push 到 远程仓库 就好了：
 
 git reset --hard HEAD^
-git push -f
+git push -f<br>
 总结：以上 4 种状态的撤销我们都用到了同一个命令 git reset —hard ，前 2 种状态的用法甚至完全一样，所以只要掌握了 git reset —hard 这个命令的用法，从此你再也不用担心提交错误了。
