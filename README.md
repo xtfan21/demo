@@ -50,7 +50,7 @@ git diff master origin/master<br>
 git checkout .
 或者
 
-git reset --hard
+git reset --hard <br>
 2、已暂存，未提交<br>
 你已经执行了 git add . ，但还没有执行 git commit -m “comment” 。这时候你意识到了错误，想要撤销，你可以执行：
 
@@ -58,12 +58,12 @@ git reset
 git checkout .
 或者
 
-git reset --hard
+git reset --hard <br>
 3、已提交，未推送<br>
 你的手太快，你既执行了 git add . ，又执行了 git commit ，这时候你的代码已经进入了你的 本地仓库 ，然而你后悔了，怎么办？不要着急，还有办法。
 
 git reset --hard origin/master
-还是这个 git reset —hard 命令，只不过这次多了一个参数 origin/master ，正如我们上面讲过的， origin/master 代表 远程仓库 ，既然你已经污染了你的 本地仓库 ，那么就从 远程仓库 把代码取回来吧。
+还是这个 git reset —hard 命令，只不过这次多了一个参数 origin/master ，正如我们上面讲过的， origin/master 代表 远程仓库 ，既然你已经污染了你的 本地仓库 ，那么就从 远程仓库 把代码取回来吧。<br>
 4、已推送<br>
 很不幸，你的手实在是太快了，你既 git add 了，又 git commit 了，并且还 git push 了，这时你的代码已经进入 远程仓库 。如果你想恢复的话，还好，由于你的 本地仓库 和 远程仓库 是等价的，你只需要先恢复 本地仓库 ，再强制 push 到 远程仓库 就好了：
 
