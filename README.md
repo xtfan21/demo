@@ -14,26 +14,26 @@ git push 把所有文件从 本地仓库 推送进 远程仓库。
 4个区
 git 之所以令人费解，主要是它相比于 svn 等等传统的版本管理工具，多引入了一个 暂存区 ( Stage )的概念，就因为多了这一个概念，而使很多人疑惑。其实，在初学者来说，每个区具体怎么工作的，我们完全不需要关心，而只要知道有这么 4 个区就够了：
 
-工作区( Working Area )
++工作区( Working Area )
 
-暂存区( Stage )
++暂存区( Stage )
 
-本地仓库( Local Repository )
++本地仓库( Local Repository )
 
-远程仓库( Remote Repository )
++远程仓库( Remote Repository )
 
 5种状态
-以上 4 个区，进入每一个区成功之后会产生一个状态，再加上最初始的一个状态，一共是 5 种状态。以下我们把这 5 种状态分别命名为：
+>以上 4 个区，进入每一个区成功之后会产生一个状态，再加上最初始的一个状态，一共是 5 种状态。以下我们把这 5 种状态分别命名为：
 
-未修改( Origin )
+>未修改( Origin )
 
-已修改( Modified )
+>已修改( Modified )
 
-已暂存( Staged )
+>已暂存( Staged )
 
-已提交( Committed )
+>已提交( Committed )
 
-已推送( Pushed )
+>已推送( Pushed )
 
 ##一、检查修改<br>
 1、已修改，未暂存
